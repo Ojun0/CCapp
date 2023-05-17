@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- android_large___1 strings -->
+
+	<string name="app_name">Page 1</string>
+	<string name="ek_img_content">ExportKit Image</string>
+	<string name="btn_id">아이디 찾기</string>
+	<string name="btn_pw">비밀번호 찾기</string>
+	<string name="btn_join">회원가입</string>
+	<string name="btn_login">로그인</string>
+</resources>

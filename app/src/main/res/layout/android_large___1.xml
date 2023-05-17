@@ -1,0 +1,146 @@
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent" android:layout_height="wrap_content" >
+	<!--
+	/*
+	 *	This content is generated from the API File Info.
+	 *	(Alt+Shift+Ctrl+I).
+	 *
+	 *	@desc
+	 *	@file 		android_large___1
+	 *	@date 		Wednesday 10th of May 2023 05:22:59 AM
+	 *	@title 		Page 1
+	 *	@author
+	 *	@keywords
+	 *	@generator 	Export Kit v1.3.figma
+	 *
+	 */
+	-->
+	<ScrollView android:id="@+id/android_large___1"
+		android:layout_width="wrap_content"
+		android:layout_height="match_parent" >
+
+		<RelativeLayout android:id="@+id/content_container"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" >
+
+
+
+			<RelativeLayout android:id="@+id/page_android_large___1_ek1"
+				android:layout_marginTop="0dp"
+				android:layout_marginStart="0dp"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				>
+
+				<View   android:id="@+id/_bg__android_large___1_ek2"
+					android:background="@drawable/_bg__android_large___1_ek2_shape"
+					 android:layout_marginStart="0dp"
+					android:layout_marginTop="0dp"
+					android:layout_width="412dp"
+					android:layout_height="732dp" />
+
+				<View   android:id="@+id/rectangle_23"
+					android:background="@drawable/rectangle_23_shape"
+					 android:layout_marginStart="34dp"
+					android:layout_marginTop="194dp"
+					android:layout_width="344dp"
+					android:layout_height="266dp" />
+
+				<View   android:id="@+id/rectangle_22"
+					android:background="@drawable/rectangle_22_shape"
+					 android:layout_marginStart="64dp"
+					android:layout_marginTop="350dp"
+					android:layout_width="147dp"
+					android:layout_height="32dp" />
+
+				<Button   android:id="@+id/rectangle_25"
+					android:background="@drawable/rectangle_25_shape"
+					 android:layout_marginStart="168dp"
+					android:layout_marginTop="402dp"
+					android:layout_width="72dp"
+					android:layout_height="41dp"
+					android:text="@string/btn_pw"
+					android:textSize="8sp"
+					android:textColor="#aaaaaa"/>
+
+				<Button   android:id="@+id/rectangle_26"
+					android:background="@drawable/rectangle_26_shape"
+					 android:layout_marginStart="64dp"
+					android:layout_marginTop="402dp"
+					android:layout_width="72dp"
+					android:layout_height="41dp"
+					android:text="@string/btn_id"
+					android:textSize="7sp"
+					android:textColor="#aaaaaa"/>
+
+				<Button   android:id="@+id/rectangle_27"
+					android:background="@drawable/rectangle_27_shape"
+					 android:layout_marginStart="274dp"
+					android:layout_marginTop="403dp"
+					android:layout_width="72dp"
+					android:layout_height="41dp"
+					android:text="@string/btn_join"
+					android:textSize="8sp"
+					android:textColor="#aaaaaa"
+					/>
+
+				<ImageView android:id="@+id/line_1"
+					android:src="@drawable/line_1"
+					android:contentDescription="line_1"
+					 android:layout_marginStart="135dp"
+					android:layout_marginTop="424dp"
+					android:layout_width="21dp"
+					android:layout_height="0dp" />
+
+				<ImageView android:id="@+id/line_2"
+					android:src="@drawable/line_2"
+					android:contentDescription="line_2"
+					 android:layout_marginStart="252dp"
+					android:layout_marginTop="424dp"
+					android:layout_width="21dp"
+					android:layout_height="0dp" />
+
+				<Button
+					android:id="@+id/rectangle_5"
+					android:layout_width="84dp"
+					android:layout_height="32dp"
+					android:layout_marginStart="262dp"
+					android:layout_marginTop="350dp"
+					android:background="@drawable/rectangle_5_shape"
+					android:text="@string/btn_login"
+					android:textSize="11sp"
+					android:textColor="#aaaaaa"
+					android:textStyle="bold"/>
+
+				<EditText android:id="@+id/rectangle_3"
+					android:background="@drawable/rectangle_3_shape"
+					 android:layout_marginStart="64dp"
+					android:layout_marginTop="235dp"
+					android:layout_width="282dp"
+					android:layout_height="40dp"
+					android:hint="아이디"
+					android:textColorHint="#999999"
+					android:textSize="16sp"/>
+
+				<EditText android:id="@+id/rectangle_24"
+					android:background="@drawable/rectangle_24_shape"
+					 android:layout_marginStart="64dp"
+					android:layout_marginTop="296dp"
+					android:layout_width="282dp"
+					android:layout_height="40dp"
+					android:hint="비밀번호"
+					android:textColorHint="#999999"
+					android:textSize="16sp"/>
+
+				<View   android:id="@+id/ellipse_2"
+					android:background="@drawable/ellipse_2_shape"
+					 android:layout_marginStart="64dp"
+					android:layout_marginTop="357dp"
+					android:layout_width="18dp"
+					android:layout_height="18dp" />
+
+			</RelativeLayout>
+		</RelativeLayout>
+
+	</ScrollView>
+</HorizontalScrollView>
