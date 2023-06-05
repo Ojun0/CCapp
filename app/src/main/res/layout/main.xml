@@ -16,15 +16,45 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/reserch"
         />
-    <View
-        android:id="@+id/rectangle_2"
+
+    <Button
+        android:id="@+id/room1"
         android:layout_width="360dp"
         android:layout_height="130dp"
         android:layout_alignParentLeft="true"
-        android:layout_marginLeft="26dp"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="77dp"
-        android:background="@drawable/chat1"
-        />
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="86dp"
+        android:background="@drawable/chat1" />
+
+    <Button
+        android:id="@+id/room2"
+        android:layout_width="360dp"
+        android:layout_height="130dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="242dp"
+        android:background="@drawable/chat1" />
+
+    <Button
+        android:id="@+id/room3"
+        android:layout_width="360dp"
+        android:layout_height="130dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="399dp"
+        android:background="@drawable/chat1" />
+
+    <Button
+        android:id="@+id/room4"
+        android:layout_width="360dp"
+        android:layout_height="130dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="557dp"
+        android:background="@drawable/chat1" />
 
 </RelativeLayout>
