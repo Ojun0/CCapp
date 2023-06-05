@@ -16,7 +16,9 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/reserch"
         />
-
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
     <Button
         android:id="@+id/room1"
         android:layout_width="360dp"
@@ -26,7 +28,11 @@
         android:layout_marginLeft="28dp"
         android:layout_marginTop="86dp"
         android:background="@drawable/rectangle_5_shape" />
+    </FrameLayout>
 
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
     <Button
         android:id="@+id/room2"
         android:layout_width="360dp"
@@ -36,6 +42,8 @@
         android:layout_marginLeft="26dp"
         android:layout_marginTop="242dp"
         android:background="@drawable/chat1" />
+    </FrameLayout>
+
 
     <Button
         android:id="@+id/room3"
