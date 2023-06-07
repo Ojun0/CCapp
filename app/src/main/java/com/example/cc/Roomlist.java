@@ -15,6 +15,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.appcompat.widget.Toolbar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
+
 import com.example.cc.javapapers.android.chat.ChatBubbleActivity;
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +24,10 @@ import java.util.List;
 public class Roomlist extends AppCompatActivity {
     RelativeLayout main;
     EditText reserch;
-    Button room1, room2, room3, room4;
+
+    ConstraintLayout[] room_layouts = new ConstraintLayout[3];
+    Button[] room_buttons = new Button[3];
+    int roomNum = 0;
 
     ImageView rimg1, rimg2, rimg3, rimg4;
 
@@ -68,15 +73,36 @@ public class Roomlist extends AppCompatActivity {
 
 //        main = (LinearLayout) findViewById(R.id.main);
 //        reserch = (EditText) findViewById(R.id.reserch);
-        room1 = (Button) findViewById(R.id.room1);
-        room2 = (Button) findViewById(R.id.room2);
-        room3 = (Button) findViewById(R.id.room3);
+        room_layouts[0] = findViewById(R.id.room_layout1);
+        room_layouts[1] = findViewById(R.id.room_layout2);
+        room_layouts[2] = findViewById(R.id.room_layout3);
+
+        room_buttons[0] = findViewById(R.id.room1);
+        room_buttons[1] = findViewById(R.id.room2);
+        room_buttons[2] = findViewById(R.id.room3);
+
         rname1 = (TextView) findViewById(R.id.rname1);
         rname2 = (TextView) findViewById(R.id.rname2);
         rname3 = (TextView) findViewById(R.id.rname3);
 
 
-        room1.setOnClickListener(new View.OnClickListener() {
+        room_buttons[0].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), ChatBubbleActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        room_buttons[1].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), ChatBubbleActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        room_buttons[2].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), ChatBubbleActivity.class);
@@ -97,16 +123,10 @@ public class Roomlist extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.addRoom:
-                    if (roomVisible) {
-                        room1.setVisibility(View.VISIBLE);
-                        roomVisible = true;
-                    } else if (roomVisible) {
-                        room2.setVisibility(View.VISIBLE);
-                        roomVisible = true;
-                    } else {
-                        room3.setVisibility(View.VISIBLE);
-                        roomVisible = true;
-                    }
+                room_layouts[roomNum].setVisibility(View.VISIBLE);
+                roomNum += 1;
+                if (roomNum >= room_layouts.length)
+                    roomNum = room_layouts.length - 1;
                 return true;
             case R.id.item_help:
                 startActivity (new Intent (this, Help.class));

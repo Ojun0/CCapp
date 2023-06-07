@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
@@ -31,15 +32,16 @@
             android:id="@+id/chatText"
             android:layout_width="400dp"
             android:layout_height="40dp"
-            android:layout_marginRight="12dp"
             android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
             android:layout_marginBottom="8dp"
             android:layout_toLeftOf="@+id/buttonSend"
             android:background="@drawable/textbox"
-            android:ems="10"
+
             android:inputType="textMultiLine"
-            android:textColor="@color/black"
-            android:padding="20dp"/>
+            android:paddingLeft="15dp"
+            android:textColor="@color/white"
+            android:visibility="visible" />
 
         <Button
             android:layout_width="88dp"
@@ -51,6 +53,7 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
             android:background="@drawable/send_button"/>
+
     </RelativeLayout>
 
 </RelativeLayout>

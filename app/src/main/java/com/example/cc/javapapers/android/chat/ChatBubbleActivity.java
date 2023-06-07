@@ -1,7 +1,6 @@
 package com.example.cc.javapapers.android.chat;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.database.DataSetObserver;
@@ -9,7 +8,6 @@ import android.os.Bundle;
 import android.text.Layout;
 import android.view.KeyEvent;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnKeyListener;
 import android.view.inputmethod.InputMethodManager;
@@ -23,12 +21,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.cc.R;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class ChatBubbleActivity extends AppCompatActivity {
     private static final String TAG = "ChatActivity";
 
     private ChatArrayAdapter chatArrayAdapter;
     private ListView listView;
-    private EditText chatText;
+    private EditText chatEditText;
     private Button buttonSend;
     Layout activity_chat;
 
@@ -53,9 +54,9 @@ public class ChatBubbleActivity extends AppCompatActivity {
         chatArrayAdapter = new ChatArrayAdapter(getApplicationContext(), R.layout.activity_chat_singlemessage);
         listView.setAdapter(chatArrayAdapter);
 
-        chatText = (EditText) findViewById(R.id.chatText);
+        chatEditText = (EditText) findViewById(R.id.chatText);
 
-        chatText.setOnKeyListener(new OnKeyListener() {
+        chatEditText.setOnKeyListener(new OnKeyListener() {
             public boolean onKey(View v, int keyCode, KeyEvent event) {
                 if ((event.getAction() == KeyEvent.ACTION_DOWN) && (keyCode == KeyEvent.KEYCODE_ENTER)) {
                     return sendChatMessage();
@@ -63,6 +64,7 @@ public class ChatBubbleActivity extends AppCompatActivity {
                 return false;
             }
         });
+
         buttonSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {
@@ -85,6 +87,16 @@ public class ChatBubbleActivity extends AppCompatActivity {
 
 
     }
+
+    @Override
+    protected void onStop() {
+        // call the superclass method first
+        super.onStop();
+        // 저장 기능 구현해야함
+
+    }
+
+
     @SuppressLint("NonConstantResourceId")
     @Override
     public boolean onOptionsItemSelected( MenuItem item) {
@@ -98,8 +110,12 @@ public class ChatBubbleActivity extends AppCompatActivity {
     }
 
     private boolean sendChatMessage(){
-        chatArrayAdapter.add(new ChatMessage(side, chatText.getText().toString()));
-        chatText.setText("");
+        long now = System.currentTimeMillis();
+        Date date = new Date(now);
+        SimpleDateFormat sdf = new SimpleDateFormat("hh:mm:ss");
+        String getTime = sdf.format(date);
+        chatArrayAdapter.add(new ChatMessage(side, chatEditText.getText().toString(), getTime));
+        chatEditText.setText("");
         side = !side;
         return true;
     }
@@ -110,6 +126,8 @@ public class ChatBubbleActivity extends AppCompatActivity {
             imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
         }
     }
+
+
 
 
 }
