@@ -1,5 +1,6 @@
 package com.example.cc.javapapers.android.chat;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -7,6 +8,7 @@ import android.database.DataSetObserver;
 import android.os.Bundle;
 import android.text.Layout;
 import android.view.KeyEvent;
+import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnKeyListener;
@@ -15,10 +17,13 @@ import android.widget.AbsListView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.widget.Toolbar;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.cc.R;
 
-public class ChatBubbleActivity extends Activity {
+public class ChatBubbleActivity extends AppCompatActivity {
     private static final String TAG = "ChatActivity";
 
     private ChatArrayAdapter chatArrayAdapter;
@@ -36,6 +41,11 @@ public class ChatBubbleActivity extends Activity {
         Intent i = getIntent();
         setContentView(R.layout.activity_chat);
 
+        Toolbar toolbar = findViewById (R.id.toolbar2);
+        setSupportActionBar (toolbar);
+        ActionBar actionBar = getSupportActionBar ();
+        actionBar.setDisplayHomeAsUpEnabled (true);
+
         buttonSend = (Button) findViewById(R.id.buttonSend);
 
         listView = (ListView) findViewById(R.id.listView1);
@@ -44,6 +54,7 @@ public class ChatBubbleActivity extends Activity {
         listView.setAdapter(chatArrayAdapter);
 
         chatText = (EditText) findViewById(R.id.chatText);
+
         chatText.setOnKeyListener(new OnKeyListener() {
             public boolean onKey(View v, int keyCode, KeyEvent event) {
                 if ((event.getAction() == KeyEvent.ACTION_DOWN) && (keyCode == KeyEvent.KEYCODE_ENTER)) {
@@ -56,6 +67,7 @@ public class ChatBubbleActivity extends Activity {
             @Override
             public void onClick(View arg0) {
                 sendChatMessage();
+                closeKeyboard();
             }
         });
 
@@ -70,16 +82,19 @@ public class ChatBubbleActivity extends Activity {
                 listView.setSelection(chatArrayAdapter.getCount() - 1);
             }
         });
-        listView.setOnTouchListener(new View.OnTouchListener()
-        {
-            @Override
-            public boolean onTouch(View v, MotionEvent event)
-            {
-                hideKeyboard();
-                return false;
-            }
-        }); // 키보드 내리기
 
+
+    }
+    @SuppressLint("NonConstantResourceId")
+    @Override
+    public boolean onOptionsItemSelected( MenuItem item) {
+        switch (item.getItemId ()) {
+            case android.R.id.home:
+                finish ();
+                return true;
+            default:
+                return super.onOptionsItemSelected (item);
+        }
     }
 
     private boolean sendChatMessage(){
@@ -88,10 +103,13 @@ public class ChatBubbleActivity extends Activity {
         side = !side;
         return true;
     }
-    void hideKeyboard()
-    {
-        InputMethodManager inputManager = (InputMethodManager) this.getSystemService(Context.INPUT_METHOD_SERVICE);
-        inputManager.hideSoftInputFromWindow(this.getCurrentFocus().getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
-    } //키보드 내리는 메소드
+    private void closeKeyboard() {
+        View view = this.getCurrentFocus();
+        if (view != null) {
+            InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+        }
+    }
+
 
 }

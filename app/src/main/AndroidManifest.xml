@@ -29,9 +29,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".javapapers.android.chat.ChatBubbleActivity"/>
-
+    
+        <activity android:name=".javapapers.android.chat.ChatBubbleActivity"
+            android:exported="false"
+            android:parentActivityName=".Roomlist"/>
+        <activity android:name=".Help"
+            android:parentActivityName=".Roomlist"/>
     </application>
 
 </manifest>

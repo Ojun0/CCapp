@@ -6,7 +6,12 @@
 
     android:layout_height="match_parent">
 
-
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/rectangle_5_color">
+    </androidx.appcompat.widget.Toolbar>
 
     <TextView
 

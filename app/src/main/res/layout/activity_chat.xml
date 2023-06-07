@@ -4,12 +4,19 @@
     android:layout_height="fill_parent"
     android:orientation="vertical"
     android:background="@color/_bg__android_large___1_ek2_color">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/rectangle_5_color">
+    </androidx.appcompat.widget.Toolbar>
 
     <ListView
         android:id="@+id/listView1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="80dp">
+        android:layout_marginTop="56dp"
+        android:layout_marginBottom="65dp">
     </ListView>
 
     <RelativeLayout

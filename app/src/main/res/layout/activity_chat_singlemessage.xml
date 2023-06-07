@@ -2,7 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    >
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
 
     <LinearLayout
         android:id="@+id/singleMessageContainer"
@@ -19,7 +21,7 @@
             android:background="@drawable/bubble_a"
             android:paddingLeft="10dip"
             android:text="Hello bubbles!"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/black" />
     </LinearLayout>
 
 </LinearLayout>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/item_help"
         android:title="도움말"></item>
@@ -9,4 +10,9 @@
     <item
         android:id="@+id/notion"
         android:title="Notion"></item>
+    <item
+        android:id="@+id/addRoom"
+        android:title="adr"
+        android:icon="@drawable/baseline_add_24"
+        app:showAsAction="always"/>
 </menu>

@@ -11,4 +11,8 @@
 	<string name="app_name">manage</string>
 	<string name="hello_world">Hello world!</string>
 	<string name="action_settings">Settings</string>
+	<string name="room1">discordNotion</string>
+	<string name="room2">프로젝트</string>
+	<string name="room3">일정</string>
+	<string name="room4">안드로이드 스튜디오</string>
 </resources>
