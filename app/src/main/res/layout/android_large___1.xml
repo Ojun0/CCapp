@@ -46,42 +46,39 @@
 					android:layout_width="344dp"
 					android:layout_height="266dp" />
 
-				<View   android:id="@+id/rectangle_22"
-					android:background="@drawable/rectangle_22_shape"
-					 android:layout_marginStart="64dp"
-					android:layout_marginTop="350dp"
-					android:layout_width="147dp"
-					android:layout_height="32dp" />
-
 				<Button   android:id="@+id/rectangle_25"
 					android:background="@drawable/rectangle_25_shape"
 					 android:layout_marginStart="168dp"
 					android:layout_marginTop="402dp"
-					android:layout_width="72dp"
-					android:layout_height="41dp"
+					android:layout_width="74dp"
+					android:layout_height="40dp"
 					android:text="@string/btn_pw"
 					android:textSize="8sp"
-					android:textColor="#aaaaaa"/>
+					android:textColor="#999999"
+					android:textStyle="bold"
+					/>
 
 				<Button   android:id="@+id/rectangle_26"
 					android:background="@drawable/rectangle_26_shape"
 					 android:layout_marginStart="64dp"
 					android:layout_marginTop="402dp"
-					android:layout_width="72dp"
-					android:layout_height="41dp"
+					android:layout_width="78dp"
+					android:layout_height="40dp"
 					android:text="@string/btn_id"
 					android:textSize="7sp"
-					android:textColor="#aaaaaa"/>
+					android:textColor="#999999"
+					android:textStyle="bold"/>
 
 				<Button   android:id="@+id/rectangle_27"
 					android:background="@drawable/rectangle_27_shape"
 					 android:layout_marginStart="274dp"
 					android:layout_marginTop="403dp"
-					android:layout_width="72dp"
-					android:layout_height="41dp"
+					android:layout_width="78dp"
+					android:layout_height="40dp"
 					android:text="@string/btn_join"
-					android:textSize="8sp"
-					android:textColor="#aaaaaa"
+					android:textSize="9sp"
+					android:textColor="#999999"
+					android:textStyle="bold"
 					/>
 
 				<ImageView android:id="@+id/line_1"
@@ -109,7 +106,7 @@
 					android:background="@drawable/rectangle_5_shape"
 					android:text="@string/btn_login"
 					android:textSize="11sp"
-					android:textColor="#aaaaaa"
+					android:textColor="#444444"
 					android:textStyle="bold"/>
 
 				<EditText android:id="@+id/rectangle_3"
@@ -119,8 +116,9 @@
 					android:layout_width="282dp"
 					android:layout_height="40dp"
 					android:hint="아이디"
-					android:textColorHint="#999999"
-					android:textSize="16sp"/>
+					android:textColorHint="#777777"
+					android:textSize="16sp"
+					android:paddingLeft="16dp"/>
 
 				<EditText android:id="@+id/rectangle_24"
 					android:background="@drawable/rectangle_24_shape"
@@ -129,15 +127,10 @@
 					android:layout_width="282dp"
 					android:layout_height="40dp"
 					android:hint="비밀번호"
-					android:textColorHint="#999999"
-					android:textSize="16sp"/>
+					android:textColorHint="#777777"
+					android:textSize="16sp"
+					android:paddingLeft="16dp"/>
 
-				<View   android:id="@+id/ellipse_2"
-					android:background="@drawable/ellipse_2_shape"
-					 android:layout_marginStart="64dp"
-					android:layout_marginTop="357dp"
-					android:layout_width="18dp"
-					android:layout_height="18dp" />
 
 			</RelativeLayout>
 		</RelativeLayout>

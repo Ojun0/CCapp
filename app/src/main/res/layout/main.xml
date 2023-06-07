@@ -29,34 +29,35 @@
 <!--                android:layout_marginTop="20dp"-->
 <!--                android:background="@drawable/reserch"-->
 <!--                />-->
-
-            <Button
-                android:id="@+id/room1"
-                android:layout_width="360dp"
-                android:layout_height="130dp"
-                android:layout_alignParentLeft="true"
-                android:layout_marginLeft="28dp"
-                android:layout_marginTop="40dp"
-                android:background="@drawable/rectangle_5_shape"
-                android:visibility="visible"/>
-
-            <ImageView
-                android:id="@+id/rimg1"
-                android:layout_width="104dp"
-                android:layout_height="96dp"
-                android:layout_marginStart="44dp"
-                android:layout_marginTop="58dp"
-                android:src="@drawable/r1" />
-
-            <TextView
-                android:id="@+id/rname1"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/room1"
-                android:textSize="24dp"
-                android:layout_marginTop="72dp"
-                android:layout_marginStart="164dp"/>
+                android:id="@+id/room1text">
+                <Button
+                    android:id="@+id/room1"
+                    android:layout_width="360dp"
+                    android:layout_height="130dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="28dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/rectangle_5_shape"
+                    android:visibility="invisible"/>
+                <TextView
+                    android:id="@+id/rname1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/room1"
+                    android:textSize="24dp"
+                    android:layout_marginTop="72dp"
+                    android:layout_marginStart="164dp"
+                    android:elevation="2dp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
 
+`           <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/room2text">
             <Button
                 android:id="@+id/room2"
                 android:layout_width="360dp"
@@ -65,17 +66,8 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginLeft="26dp"
                 android:layout_marginTop="200dp"
-                android:background="@drawable/chat1" />
-
-            <ImageView
-                android:id="@+id/rimg2"
-                android:layout_width="104dp"
-                android:layout_height="96dp"
-                android:layout_marginStart="44dp"
-                android:layout_marginTop="220dp"
-                android:src="@drawable/r2"
-                />
-
+                android:background="@drawable/chat1"
+                android:visibility="invisible"/>
             <TextView
                 android:id="@+id/rname2"
                 android:layout_width="wrap_content"
@@ -83,7 +75,10 @@
                 android:text="@string/room2"
                 android:textSize="24dp"
                 android:layout_marginTop="232dp"
-                android:layout_marginStart="164dp"/>
+                android:layout_marginStart="164dp"
+                android:elevation="2dp"
+                android:textStyle="bold"/>
+            </LinearLayout>
 
             <Button
                 android:id="@+id/room3"
@@ -93,15 +88,8 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginLeft="26dp"
                 android:layout_marginTop="360dp"
-                android:background="@drawable/chat1" />
-
-            <ImageView
-                android:id="@+id/rimg3"
-                android:layout_width="104dp"
-                android:layout_height="96dp"
-                android:layout_marginStart="44dp"
-                android:layout_marginTop="376dp"
-                android:src="@drawable/r3" />
+                android:background="@drawable/chat1"
+                android:visibility="invisible"/>
 
             <TextView
                 android:id="@+id/rname3"
@@ -110,32 +98,9 @@
                 android:text="@string/room3"
                 android:textSize="24dp"
                 android:layout_marginTop="388dp"
-                android:layout_marginStart="164dp"/>
-            <Button
-                android:id="@+id/room4"
-                android:layout_width="360dp"
-                android:layout_height="130dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="28dp"
-                android:layout_marginTop="520dp"
-                android:background="@drawable/chat1" />
-            <ImageView
-                android:id="@+id/rimg4"
-                android:layout_width="104dp"
-                android:layout_height="96dp"
-                android:layout_marginStart="44dp"
-                android:layout_marginTop="538dp"
-                android:src="@drawable/r4" />
+                android:layout_marginStart="164dp"
+                android:textStyle="bold"/>
 
-            <TextView
-                android:id="@+id/rname4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/room4"
-                android:textSize="24dp"
-                android:layout_marginTop="546dp"
-                android:layout_marginStart="164dp"/>
         </RelativeLayout>
     </ScrollView>
 </LinearLayout>

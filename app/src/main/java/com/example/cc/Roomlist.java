@@ -16,6 +16,8 @@ import android.widget.TextView;
 import androidx.appcompat.widget.Toolbar;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.cc.javapapers.android.chat.ChatBubbleActivity;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Roomlist extends AppCompatActivity {
     RelativeLayout main;
@@ -69,24 +71,10 @@ public class Roomlist extends AppCompatActivity {
         room1 = (Button) findViewById(R.id.room1);
         room2 = (Button) findViewById(R.id.room2);
         room3 = (Button) findViewById(R.id.room3);
-        room4 = (Button) findViewById(R.id.room4);
-        rimg1 = (ImageView) findViewById(R.id.rimg1);
-        rimg2 = (ImageView) findViewById(R.id.rimg2);
-        rimg3 = (ImageView) findViewById(R.id.rimg3);
-        rimg4 = (ImageView) findViewById(R.id.rimg4);
         rname1 = (TextView) findViewById(R.id.rname1);
         rname2 = (TextView) findViewById(R.id.rname2);
         rname3 = (TextView) findViewById(R.id.rname3);
-        rname4 = (TextView) findViewById(R.id.rname4);
 
-        rimg1.bringToFront();
-        rimg2.bringToFront();
-        rimg3.bringToFront();
-        rimg4.bringToFront();
-        rname1.bringToFront();
-        rname2.bringToFront();
-        rname3.bringToFront();
-        rname4.bringToFront();
 
         room1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -110,10 +98,13 @@ public class Roomlist extends AppCompatActivity {
         switch (item.getItemId()){
             case R.id.addRoom:
                     if (roomVisible) {
-                        room1.setVisibility(View.INVISIBLE);
-                        roomVisible = false;
-                    } else {
                         room1.setVisibility(View.VISIBLE);
+                        roomVisible = true;
+                    } else if (roomVisible) {
+                        room2.setVisibility(View.VISIBLE);
+                        roomVisible = true;
+                    } else {
+                        room3.setVisibility(View.VISIBLE);
                         roomVisible = true;
                     }
                 return true;

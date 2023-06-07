@@ -36,7 +36,6 @@ public class MainActivity extends Activity {
 
         _bg__android_large___1_ek2 = (View) findViewById(R.id._bg__android_large___1_ek2);
         rectangle_23 = (View) findViewById(R.id.rectangle_23);
-        rectangle_22 = (View) findViewById(R.id.rectangle_22);
         rectangle_25 = (Button) findViewById(R.id.rectangle_25);
         rectangle_26 = (Button) findViewById(R.id.rectangle_26);
         rectangle_27 = (Button) findViewById(R.id.rectangle_27);
@@ -45,8 +44,6 @@ public class MainActivity extends Activity {
         rectangle_5 = (Button) findViewById(R.id.rectangle_5);
         rectangle_3 = (EditText) findViewById(R.id.rectangle_3);
         rectangle_24 = (EditText) findViewById(R.id.rectangle_24);
-        ellipse_2 = (View) findViewById(R.id.ellipse_2);
-
 
         //custom code goes here
 
