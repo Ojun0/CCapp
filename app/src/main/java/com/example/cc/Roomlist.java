@@ -1,12 +1,14 @@
 package com.example.cc;
 
 import android.annotation.SuppressLint;
+import android.app.Dialog;
 import android.content.Intent;
 import android.opengl.Visibility;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -24,6 +26,7 @@ import java.util.List;
 public class Roomlist extends AppCompatActivity {
     RelativeLayout main;
     EditText reserch;
+    Dialog dilaog01;
 
     ConstraintLayout[] room_layouts = new ConstraintLayout[3];
     Button[] room_buttons = new Button[3];
@@ -67,6 +70,10 @@ public class Roomlist extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         setTitle("");
+
+        dilaog01 = new Dialog(Roomlist.this);
+        dilaog01.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dilaog01.setContentView(R.layout.dialog01);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -123,10 +130,12 @@ public class Roomlist extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.addRoom:
-                room_layouts[roomNum].setVisibility(View.VISIBLE);
-                roomNum += 1;
-                if (roomNum >= room_layouts.length)
-                    roomNum = room_layouts.length - 1;
+                showDialog01();
+//                room_layouts[roomNum].setVisibility(View.VISIBLE);
+//                roomNum += 1;
+//                if (roomNum >= room_layouts.length)
+//                    roomNum = room_layouts.length - 1;
+//                return true;
                 return true;
             case R.id.item_help:
                 startActivity (new Intent (this, Help.class));
@@ -137,6 +146,25 @@ public class Roomlist extends AppCompatActivity {
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public void showDialog01() {
+        dilaog01.show();
+
+        Button resultBtn = dilaog01.findViewById(R.id.resultBtn);
+        if (resultBtn != null) {
+            resultBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    room_layouts[roomNum].setVisibility(View.VISIBLE);
+                    roomNum += 1;
+                    if (roomNum >= room_layouts.length)
+                        roomNum = room_layouts.length - 1;
+                    dilaog01.dismiss();
+                }
+            });
+        }
+
     }
 
 

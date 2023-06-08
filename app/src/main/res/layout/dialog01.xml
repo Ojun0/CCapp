@@ -1,69 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
     android:orientation="vertical">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="194dp"
-        android:layout_height="212dp"
-        android:background="#313338">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:layout_editor_absoluteY="312dp">
-
-        </LinearLayout>
-
-        <Button
-            android:id="@+id/noBtn"
-            android:layout_width="175dp"
-            android:layout_height="45dp"
-            android:layout_weight="1"
-            android:text="discordNotion"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/yesBtn" />
-
-        <Button
-            android:id="@+id/yesBtn"
-            android:layout_width="175dp"
-            android:layout_height="45dp"
-            android:layout_weight="1"
-            android:text="프로젝트"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.473"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
+        android:layout_width="190dp"
+        android:layout_height="300dp"
+        android:background="@color/_bg__android_large___1_ek2_color">
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="190dp"
-            android:layout_height="69dp"
+            android:layout_width="180dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="8dp"
             android:background="#313338"
-            android:paddingTop="24dp"
+            android:paddingTop="10dp"
             android:text="Notion"
             android:textAlignment="center"
             android:textColor="#FDFCFC"
+            android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/button2"
-            android:layout_width="175dp"
-            android:layout_height="45dp"
-            android:text="회의"
+            android:id="@+id/diaBtn1"
+            android:layout_width="170dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="2dp"
+            android:text="discordNotion"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <Button
+            android:id="@+id/diaBtn2"
+            android:layout_width="170dp"
+            android:layout_height="46dp"
+            android:text="프로젝트"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/noBtn" />
+            app:layout_constraintTop_toBottomOf="@+id/diaBtn1" />
+
+        <Button
+            android:id="@+id/diaBtn3"
+            android:layout_width="170dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="2dp"
+            android:text="일정"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/diaBtn2" />
+
+        <Button
+            android:id="@+id/resultBtn"
+            android:layout_width="76dp"
+            android:layout_height="48dp"
+            android:text="생성"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/diaBtn3" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>
+
